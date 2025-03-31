@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vote Wise, Choose Right</title>
+
+    <!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Merriweather:wght@400&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+	<link rel="icon" href="favicon.png" type="image/png">
+	
+    <!-- CSS Styles -->
+    <style>
+		body {
+		font-family: 'Poppins', sans-serif;
+		margin: 0;
+		padding: 0;
+		}
+		
+		.navbar {
+		background-color: #8E1616;
+		padding: 10px 0;
+		text-align: center;
+		}
+
+    
+    .navbar ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .navbar ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    .navbar ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .navbar ul li a:hover {
+      color: #f39c12; 
+    }
+
+    
+    section {
+      padding: 50px 20px;
+      margin-top: 20px;
+      background-color: #f4f4f4;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2em;
+    }
+
+    section p {
+      font-size: 1.2em;
+    }
+
+    
+    html {
+      scroll-behavior: smooth;
+    }
+
+   
+    .sticky {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+    
+	* {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #f3f3f5;
+            color: #333;
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+
+        }
+		
+		
+
+        header {
+            background-color:#151515;
+            color: #243642;
+            padding: 40px 0;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+			 
+			
+			
+        }
+		
+
+        header h1 {
+			color: white;
+			font-family: 'Boldonse', sans-serif;
+			font-size: 2.5em;
+            margin-bottom: 5px;
+        }
+
+        header p {
+			font-family: 'Poppins', sans-serif;
+			color: white;
+            font-size: 0.65em;
+			margin-top: -10px;
+			padding-top: 0;
+        }
+		
+		html, body {
+		margin: 0;
+		padding: 0;
+		height: 100%;
+		overflow-x: hidden;
+		}
+
+
+		body {
+		background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 0, 0, 0.7)), url('https://1cms-img.imgix.net/Voter-Registration-July8-2.JPG?auto=compress') no-repeat center center/cover;
+		background-size: cover;  
+		background-position: center center;  
+		background-attachment: fixed;
+		background-repeat: no-repeat;  
+		position: relative;
+		overflow-x: hidden;
+		height: 100%; 
+		}
+
+
+	body::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+		z-index: -1;  
+	}
+
+
+	body {
+		background-position: center center;  
+		background-attachment: fixed;  
+		will-change: background-position; 
+	}
+
+
+
+        section {
+            padding: 60px 40px;
+            margin: 40px auto;
+            max-width: 1100px;
+            background-color: #171717;
+            border-radius: 10px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+			font-family: 'Poppins', sans-serif;
+            font-size: 28px;
+            color: white;
+            margin-bottom: 30px;
+            text-align: center;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .card {
+            background-color: #f9f9f9;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            margin: 20px 0;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .card h3 {
+			font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            color: #3D0000;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+			font-family: 'Merriweather', serif;
+            font-size: 15px;
+            color: #171717;
+            margin-bottom: 20px;
+        }
+
+        .card ol {
+            padding-left: 20px;
+            margin-top: 10px;
+			text-align: left;
+			color: #171717;
+        }
+
+        .card li {
+            margin-bottom: 10px;
+            font-size: 16px;
+			text-align: left;
+			color: #171717;
+        }
+		
+		strong {
+		color: #3D0000;
+		}
+		
+        .quote {
+            background-color: #eaf2e1;
+            border-left: 5px solid #8E1616;
+            padding: 20px;
+            font-style: italic;
+            margin-bottom: 30px;
+            animation: slideIn 1s ease-in-out;
+        }
+
+        @keyframes slideIn {
+            0% { transform: translateX(-30px); opacity: 0; }
+            100% { transform: translateX(0); opacity: 1; }
+        }
+
+        .cta-button {
+            display: block;
+            background-color: #8E1616;
+            color: white;
+            padding: 15px 30px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            margin: 40px auto;
+            max-width: 250px;
+        }
+
+        .cta-button:hover {
+            background-color: #45a049;
+        }
+		
+		footer {
+  background-color: none;
+  padding: 20px; /* Add some space around the footer */
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  text-align: center; /* Optional: aligns text in the footer center */
+}
+
+/* Footer content */
+.footer-content {
+  display: flex; /* Use Flexbox to arrange logos horizontally */
+  justify-content: center; /* Align logos horizontally in the center */
+  gap: 20px; /* Add some space between the logos */
+  align-items: center; /* Align logos vertically */
+}
+
+
+.footer-logo {
+  width: 65px; /* Adjust the size of logos as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Optional: Add some margin/padding if you want to separate the logos from the footer edges */
+footer {
+  margin-top: 50px;
+}
+
+
+
+    </style>
+</head>
+<body>
+
+    <header>
+     <h1>BE A RESPONSIBLE VOTER.</h1>
+        <p>Vote wise, choose right.</p>
+    </header>
+	
+	<nav class="navbar">
+    <ul>
+      <li><a href="#home">HOME</a></li>
+      <li><a href="#about">ABOUT US</a></li>
+      <li><a href="#contact">CONTACT</a></li>
+    </ul>
+  </nav>
+
+
+
+    <!-- Introduction Section -->
+    <section>
+        <h2>WHAT IS THE SIGNIFICANCE OF VOTING?</h2>
+        <div class="card">
+        <i><h3>Voting</h3></i>
+            <p>It is the backbone of a democratic country. It is a process in which people elect their chosen leader in positions. With voting, the citizens voices are heard. It gives them the power to participate in the political process, since voting is not only a right but also a civil responsibility. Practicing their right to vote ensures that the candidates that are running into position are accountable. Voting enables the citizens to shape the future of their country. Since, the power of leading the country is in the politicians hands. It is a chance to make a difference and improvement so it is essential for people to vote for deserving candidates.</p>
+
+        </div>
+    </section>
+
+    <!-- Research and Fact-Checking Section -->
+    <section>
+        <h2>HOW TO AVOID ELECTION MISINFORMATION AND PROPAGANDA?</h2>
+        <div class="card">
+            <p>These tips can be a guide for voters to avoid being persuaded by misinformation and the propaganda of the candidate. This will not just give information to the voters but it'll practice their decision making skills. </p>
+        <ol>
+			<li>
+			<strong>Check the credentials or background:</strong>
+			<p>It is a must to check their credentials or background to know their personal aspects, achievements, and qualities. This will allow the voters to know more about the candidates and in identifying the misinformation about them.</p>
+      
+			<strong>For Example:</strong>
+			<ul>
+        <li>Educational Background</li>
+        <li>Work Experience</li>
+        <li>Previous Platforms</li>
+        <li>NBI clearance</li>
+      </ul>
+    </li>
+    
+    <li>
+      <strong>Seek reliable sources:</strong>
+      <p>Fact-checking is important to identify facts from misinformation. It is advisable to check in multiple articles or websites about the topic to further check if the information is credible.</p>
+    </li>
+    
+    <li>
+      <strong>Educate yourself:</strong>
+      <p>Make sure to learn more about the candidate and their platforms from reliable sources. Take time to check if their platforms will be significant in the community. We must also be aware of our biases because it might affect our perception.</p>
+    </li>
+    
+    <li>
+      <strong>Be a responsible netizen:</strong>
+      <p>We must be responsible for what we post and share online, as we might spread fake news instead of factual information.</p>
+    </li>
+    
+    <li>
+      <strong>Be cautious:</strong>
+      <p>Many politicians use flowery words to make them appear deserving of your votes. We must always look out for sensational headlines and their propaganda.</p>
+    </li>
+  </ol>
+
+
+        </div>
+    </section>
+
+    <!-- Your Voting Rights Section -->
+    <section>
+        <h2>STEPS TO ENSURE AN INFORMED DECISION BEFORE VOTING<h2>
+        <div class="card">
+    <ol>
+	
+    <li>
+      <strong>Introspect: Know Yourself and Your Values</strong>
+      <p>Before assessing candidates, take time to understand your core beliefs and priorities:</p>
+      <ul>
+        <li>What values matter most to you? (e.g., honesty, integrity, patriotism, fairness)</li>
+        <li>What issues do you care about? (e.g., education, healthcare, economy, national security)</li>
+        <li>How do you define good leadership?</li>
+      </ul>
+    </li>
+
+    <li>
+      <strong>Identify Your Non-Negotiables</strong>
+      <p>Establish clear deal-breakers that would prevent you from supporting a candidate, such as:</p>
+      <ul>
+        <li>History of human rights violations</li>
+        <li>Corruption charges or involvement in scandals</li>
+        <li>Dishonesty or lack of transparency</li>
+        <li>Arrogance or unwillingness to listen</li>
+      </ul>
+    </li>
+
+    <li>
+      <strong>Scrutinize the Candidates</strong>
+      <p>After knowing what you stand for, evaluate candidates based on their actions, not just their words:</p>
+      <ul>
+        <li>Track Record: What have they actually accomplished in office or their profession?</li>
+        <li>Consistency: Have they been true to their principles, or do they change stances for political gain?</li>
+        <li>Leadership Style: Are they accountable, open to dialogue, and solution-oriented?</li>
+        <li>Decision-Making: Do they base decisions on research, expert advice, and public welfare?</li>
+      </ul>
+    </li>
+
+    <li>
+      <strong>Research Policies & Compare Platforms</strong>
+      <ul>
+        <li>Read their official platforms and past speeches.</li>
+        <li>Compare their stances on key issues with other candidates.</li>
+        <li>Consider how their policies align with your values and the country’s needs.</li>
+      </ul>
+    </li>
+
+    <li>
+      <strong>Evaluate Their Character & Public Service</strong>
+      <ul>
+        <li>How do they treat their opponents, critics, and the public?</li>
+        <li>Do they unite or divide people?</li>
+        <li>Have they demonstrated true public service, or are they driven by self-interest?</li>
+      </ul>
+    </li>
+
+    <li>
+      <strong>Be Mindful of Propaganda & Misinformation</strong>
+      <ul>
+        <li>Verify claims using fact-checking organizations.</li>
+        <li>Avoid being swayed by emotional tactics, viral posts, or biased media.</li>
+        <li>Look beyond speeches and campaign promises—actions speak louder than words.</li>
+      </ul>
+    </li>
+
+    <li>
+      <strong>Vote with Confidence</strong>
+      <p>By the time you cast your vote, you should feel confident that your choice aligns with your values, priorities, and vision for the future.</p>
+    </li>
+  </ol>
+        </div>
+    </section>
+
+    <!-- Voting Encouragement Quote Section -->
+    <section>
+        <div class="quote">
+			<p>"Your Vote, Your Voice – Make It Count!"</p>
+        </div>
+    </section>
+
+    <!-- Call-to-Action Section -->
+    <section>
+        <h2>GET INVOLVED, GET INFORMED</h2>
+        <div class="card">
+            <h3><i>Take Action</i></h3>
+			<p>Voting is not only a right but also a duty. Know your candidates and your policies. Think hard, consult sound information, and think about how your vote will affect your community and our country.</p>
+			<p>Your vote makes a difference and helps build the future. Stand up, speak out, and vote smart for a brighter tomorrow!</p>
+            <a href="#" class="cta-button">Get Registered Now</a>
+        </div>
+    </section>
+	
+	 <footer>
+    <div class="footer-content">
+      <!-- Logo 1 -->
+      <img src="https://upload.wikimedia.org/wikipedia/en/0/05/Spcflogo.png" alt="Logo 1" class="footer-logo">
+      <!-- Logo 2 -->
+      <img src="https://brandslogos.com/wp-content/uploads/images/jollibee-logo.png" alt="Logo 2" class="footer-logo">
+      <!-- Logo 3 -->
+      <img src="https://assets.stickpng.com/thumbs/5ec3e46558550c000442774b.png" alt="Logo 3" class="footer-logo">
+    </div>
+  </footer>
+
+
+
+</body>
+</html>
